@@ -3,41 +3,13 @@
 
 Траектория будущего: https://tbolimpiada.ru/profile
 
-text
-college-projects/
-├── README.md
-│
-├── Цифровое_производство/
-│   ├── Веб-приложение/
-│   ├── Мобильное_приложение/
-│   ├── Colab-модули/
-│   ├── Документация/
-│   └── README.md
-│
-├── Цифровые_решения/
-│   ├── Редизайн/
-│   ├── СКУД/
-│   └── README.md
-│
-├── Практика/
-│   ├── Сайт_организации/
-│   ├── README.md          # ссылка на гугл-диск с документами
-│   └── (папка Документы отсутствует – только ссылка)
-│
-├── Стажировки_и_кейсы/
-│   ├── VK_<название>/
-│   ├── Яндекс_стажировка/
-│   └── Сбер_марафон/
-│
-├── Олимпиады/
-│   ├── ИТ-Планета/
-│   ├── Траектория_будущего/
-│   ├── ArtMasters/
-│   └── Большие_вызовы/
-│
-├── Учебные_задания/
-│   ├── Конспекты/
-│   ├── Численные_методы/
-│   └── README.md
-│
-└── .gitignore
+Сертификаты:
+
+Yandex Cloud:
+1) file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
+2) file:///C:/Users/user/Downloads/468531245_yc-devops-container_Вадим_Гришаков.pdf
+3) file:///C:/Users/user/Downloads/513568498_ycloud-devsecops_Вадим_Гришаков%20(1).pdf
+4) file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
+5) file:///C:/Users/user/Downloads/520774157_ycloud-loadtesting_Вадим_Гришаков.pdf
+
+Stepik: <img width="667" height="913" alt="2026-06-23_12-31-01" src="https://github.com/user-attachments/assets/1bb9651d-f8d3-4dba-9dc9-b016fcbcab8b" />

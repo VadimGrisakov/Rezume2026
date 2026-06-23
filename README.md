@@ -6,7 +6,7 @@
 Сертификаты:
 
 Yandex Cloud:
-1) file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
+1) https://file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
 2) file:///C:/Users/user/Downloads/468531245_yc-devops-container_Вадим_Гришаков.pdf
 3) file:///C:/Users/user/Downloads/513568498_ycloud-devsecops_Вадим_Гришаков%20(1).pdf
 4) file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf

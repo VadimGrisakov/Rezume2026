@@ -6,10 +6,10 @@
 Сертификаты:
 
 Yandex Cloud:
-1) https://file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
-2) file:///C:/Users/user/Downloads/468531245_yc-devops-container_Вадим_Гришаков.pdf
-3) file:///C:/Users/user/Downloads/513568498_ycloud-devsecops_Вадим_Гришаков%20(1).pdf
-4) file:///C:/Users/user/Downloads/517697155_yc-cross-base_Вадим_Гришаков.pdf
-5) file:///C:/Users/user/Downloads/520774157_ycloud-loadtesting_Вадим_Гришаков.pdf
+1) [517697155_yc-cross-base_Вадим_Гришаков.pdf](https://github.com/user-attachments/files/29246138/517697155_yc-cross-base_._.pdf)
+2) [468531245_yc-devops-container_Вадим_Гришаков.pdf](https://github.com/user-attachments/files/29246150/468531245_yc-devops-container_._.pdf)
+3) [513568498_ycloud-devsecops_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246165/513568498_ycloud-devsecops_._.1.pdf)
+4) [517697155_yc-cross-base_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246231/517697155_yc-cross-base_._.1.pdf)
+5) [520774157_ycloud-loadtesting_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246239/520774157_ycloud-loadtesting_._.1.pdf)
 
 Stepik: <img width="667" height="913" alt="2026-06-23_12-31-01" src="https://github.com/user-attachments/assets/1bb9651d-f8d3-4dba-9dc9-b016fcbcab8b" />

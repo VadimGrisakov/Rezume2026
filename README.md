@@ -17,3 +17,5 @@ Stepik:
 <img width="667" height="913" alt="2026-06-23_12-31-01" src="https://github.com/user-attachments/assets/1bb9651d-f8d3-4dba-9dc9-b016fcbcab8b" />
 
 file:///C:/Users/user/Desktop/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC/%D0%98%D0%98%20%D0%9A%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BE%D0%BA%20%D0%B8%20%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE.html
+
+Учебная и производственная практика: https://drive.google.com/drive/folders/18hbczJ1E7r3etnhUAayrHtY7sWRvZSj3?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto

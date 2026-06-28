@@ -22,5 +22,6 @@ Stepik:
 
 Учебная и производственная практика: https://drive.google.com/drive/folders/18hbczJ1E7r3etnhUAayrHtY7sWRvZSj3?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto
 
-Конспекты:
+Шаблоны: https://drive.google.com/drive/folders/1rG3dJ-CJwdTQqq3NOBDH0JE9wopNSuPq
 
+Конспекты: https://drive.google.com/drive/u/0/folders/1_s0IMxoi8tExgOMIEs2sqD8oJFfuh_ac

@@ -9,8 +9,7 @@ Yandex Cloud:
 1) [517697155_yc-cross-base_Вадим_Гришаков.pdf](https://github.com/user-attachments/files/29246138/517697155_yc-cross-base_._.pdf)
 2) [468531245_yc-devops-container_Вадим_Гришаков.pdf](https://github.com/user-attachments/files/29246150/468531245_yc-devops-container_._.pdf)
 3) [513568498_ycloud-devsecops_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246165/513568498_ycloud-devsecops_._.1.pdf)
-4) [517697155_yc-cross-base_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246231/517697155_yc-cross-base_._.1.pdf)
-5) [520774157_ycloud-loadtesting_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246239/520774157_ycloud-loadtesting_._.1.pdf)
+4) [520774157_ycloud-loadtesting_Вадим_Гришаков (1).pdf](https://github.com/user-attachments/files/29246239/520774157_ycloud-loadtesting_._.1.pdf)
 
 Stepik:
 

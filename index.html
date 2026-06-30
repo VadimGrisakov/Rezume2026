@@ -418,6 +418,36 @@
             white-space: nowrap;
         }
 
+        /* Новый раздел сертификатов и портфолио */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            font-size: 13px;
+        }
+
+        .portfolio-card {
+            background: rgba(19, 24, 42, 0.92);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-soft);
+            padding: 12px 12px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .portfolio-title {
+            font-weight: 500;
+        }
+
+        .portfolio-desc {
+            color: var(--text-muted);
+        }
+
+        .portfolio-link {
+            font-size: 12px;
+        }
+
         @media (max-width: 768px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -454,6 +484,7 @@
                 <a href="#courses">Курсы</a>
                 <a href="#projects">Проекты</a>
                 <a href="#practice">Практика</a>
+                <a href="#portfolio">Сертификаты</a>
                 <a href="#selfdev">Саморазвитие</a>
                 <a href="#about">Обо мне</a>
             </nav>
@@ -664,6 +695,168 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сертификаты и портфолио -->
+    <section id="portfolio">
+        <div class="card">
+            <div class="section-title">
+                Сертификаты и портфолио
+                <span>Yandex Cloud · Stepik · 1С · олимпиады</span>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- ИИ Картинок и видео / Rezume2026 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">ИИ картинок и видео · Rezume2026</div>
+                    <div class="portfolio-desc">
+                        Дополнительный сайт‑портфолио с примерами проектов в области ИИ картинок и видео.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/files/29435214/3.html"
+                           target="_blank" rel="noopener">
+                            Открыть страницу «ИИ Картинок и видео (3).html»
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ИТ-Планета -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Олимпиада «ИТ‑Планета»</div>
+                    <div class="portfolio-desc">
+                        Профиль участника в системе BRAIM Challenge с результатами соревнований.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://challenge.braim.org/profile"
+                           target="_blank" rel="noopener">
+                            challenge.braim.org/profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Траектория будущего -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Олимпиада «Траектория будущего»</div>
+                    <div class="portfolio-desc">
+                        Профиль участника, образовательные траектории и достижения.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://tbolimpiada.ru/profile"
+                           target="_blank" rel="noopener">
+                            tbolimpiada.ru/profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Сертификаты Yandex Cloud -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Сертификаты Yandex Cloud</div>
+                    <div class="portfolio-desc">
+                        Базовые и продвинутые компетенции в Yandex Cloud: DevOps, DevSecOps, нагрузочное тестирование.
+                    </div>
+                    <div class="portfolio-link">
+                        <ul class="practice-list" style="padding-left:16px;margin-top:4px;">
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246138/517697155_yc-cross-base_._.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: Cross-base (базовый курс)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246150/468531245_yc-devops-container_._.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: DevOps & контейнеризация
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246165/513568498_ycloud-devsecops_._.1.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: DevSecOps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246239/520774157_ycloud-loadtesting_._.1.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: Load Testing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stepik сертификаты / скриншот -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Курсы Stepik</div>
+                    <div class="portfolio-desc">
+                        Онлайн‑курсы по программированию и ИТ с подтверждёнными сертификатами.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/assets/1bb9651d-f8d3-4dba-9dc9-b016fcbcab8b"
+                           target="_blank" rel="noopener">
+                            Скриншот сертификатов Stepik
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Конференция 1С -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Конференция 1С</div>
+                    <div class="portfolio-desc">
+                        Участие в конференции 1С, обмен опытом по разработке и автоматизации учётных систем.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/assets/05cb2c89-2028-476e-8b0c-420240167f67"
+                           target="_blank" rel="noopener">
+                            Фото с конференции 1С
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Учебная и производственная практика -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Учебная и производственная практика</div>
+                    <div class="portfolio-desc">
+                        Отчёты и материалы по учебной и производственной практике, проекты и документация.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/folders/18hbczJ1E7r3etnhUAayrHtY7sWRvZSj3?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto"
+                           target="_blank" rel="noopener">
+                            Папка практики в Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Шаблоны -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Шаблоны документов и проектов</div>
+                    <div class="portfolio-desc">
+                        Шаблоны отчётов, презентаций и проектной документации для ИТ‑проектов.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/folders/1rG3dJ-CJwdTQqq3NOBDH0JE9wopNSuPq"
+                           target="_blank" rel="noopener">
+                            Папка шаблонов в Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Конспекты -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Конспекты и учебные материалы</div>
+                    <div class="portfolio-desc">
+                        Личные конспекты по дисциплинам, систематизация теории и практики.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/u/0/folders/1_s0IMxoi8tExgOMIEs2sqD8oJFfuh_ac"
+                           target="_blank" rel="noopener">
+                            Папка конспектов в Google Drive
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>

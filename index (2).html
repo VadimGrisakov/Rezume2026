@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Гришаков Вадим Романович — сайт‑резюме</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="Сайт-резюме студента-программиста Гришакова Вадима Романовича: Python, Docker, SQL, Computer Vision, DevOps, базы данных, ML.">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --bg-alt: #13182a;
+            --accent: #3fa9f5;
+            --accent-soft: rgba(63, 169, 245, 0.1);
+            --text-main: #e5e9f0;
+            --text-muted: #9aa4bf;
+            --border-soft: #252c3f;
+            --danger: #ff6b6b;
+            --success: #4caf50;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --radius: 10px;
+            --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-main);
+            background: radial-gradient(circle at top left, #182848, #0b1020);
+            color: var(--text-main);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(11, 16, 32, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-soft);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        .nav-title {
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            color: var(--text-muted);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .nav-links a:hover {
+            background: var(--accent-soft);
+            color: var(--text-main);
+        }
+
+        main {
+            padding: 26px 0 40px;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        .card {
+            background: var(--bg-alt);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-soft);
+            padding: 22px 22px 20px;
+        }
+
+        .card + .card {
+            margin-top: 18px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.2fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .hero-main-title {
+            font-size: 26px;
+            font-weight: 600;
+            margin: 0 0 4px;
+        }
+
+        .hero-subtitle {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .hero-tagline {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-main);
+            border-left: 3px solid var(--accent);
+            padding-left: 10px;
+            margin-bottom: 14px;
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .hero-meta span {
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(19, 24, 42, 0.8);
+        }
+
+        .hero-aside {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .hero-aside-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .hero-aside-label {
+            color: var(--text-muted);
+        }
+
+        .hero-aside-value {
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+        }
+
+        .pill-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+
+        .pill {
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            padding: 4px 9px;
+            cursor: default;
+            background: rgba(19, 24, 42, 0.8);
+            color: var(--text-muted);
+        }
+
+        .pill-primary {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th, td {
+            padding: 8px 6px;
+            border-bottom: 1px solid #1e2535;
+            text-align: left;
+        }
+
+        th {
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table-badge {
+            display: inline-block;
+            padding: 3px 7px;
+            border-radius: 999px;
+            font-size: 11px;
+            background: rgba(63, 169, 245, 0.08);
+            border: 1px solid rgba(63, 169, 245, 0.6);
+            color: var(--accent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+        }
+
+        .project-card {
+            background: rgba(19, 24, 42, 0.92);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-soft);
+            padding: 12px 12px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+        }
+
+        .project-mdk {
+            font-size: 11px;
+            color: var(--text-muted);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .project-title {
+            font-weight: 500;
+        }
+
+        .project-desc {
+            color: var(--text-muted);
+        }
+
+        .project-role {
+            font-size: 11px;
+            color: var(--accent);
+        }
+
+        .practice-block {
+            display: grid;
+            grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+            gap: 16px;
+        }
+
+        .practice-list {
+            font-size: 13px;
+            margin: 0;
+            padding-left: 18px;
+            color: var(--text-muted);
+        }
+
+        .practice-list li {
+            margin-bottom: 6px;
+        }
+
+        .practice-money {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        .roadmap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 14px;
+        }
+
+        .roadmap-card-title {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+
+        .roadmap-tags {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .sdlc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 14px;
+            font-size: 13px;
+        }
+
+        .sdlc-step-title {
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .sdlc-tools {
+            color: var(--text-muted);
+        }
+
+        .sdlc-death {
+            color: var(--danger);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.9fr) minmax(0, 1.4fr);
+            gap: 16px;
+        }
+
+        .about-text {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .skills-table td:first-child {
+            width: 140px;
+            color: var(--text-muted);
+        }
+
+        .skills-tags {
+            font-size: 13px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 3px 7px;
+            margin: 2px 2px 2px 0;
+            border-radius: 999px;
+            font-size: 11px;
+            border: 1px solid var(--border-soft);
+            background: rgba(19, 24, 42, 0.9);
+        }
+
+        .tag-soft {
+            border-color: rgba(63, 169, 245, 0.4);
+            color: var(--accent);
+        }
+
+        .contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+        }
+
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--border-soft);
+            background: rgba(19, 24, 42, 0.92);
+        }
+
+        .contact-label {
+            color: var(--text-muted);
+        }
+
+        footer {
+            border-top: 1px solid var(--border-soft);
+            padding: 18px 0 24px;
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(11, 16, 32, 0.96);
+        }
+
+        .footer-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .footer-meta span {
+            white-space: nowrap;
+        }
+
+        /* Новый раздел сертификатов и портфолио */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 14px;
+            font-size: 13px;
+        }
+
+        .portfolio-card {
+            background: rgba(19, 24, 42, 0.92);
+            border-radius: var(--radius);
+            border: 1px solid var(--border-soft);
+            padding: 12px 12px 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .portfolio-title {
+            font-weight: 500;
+        }
+
+        .portfolio-desc {
+            color: var(--text-muted);
+        }
+
+        .portfolio-link {
+            font-size: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .practice-block,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .hero-main-title {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="nav">
+            <div class="nav-title">
+                Сайт‑резюме студента‑программиста
+            </div>
+            <nav class="nav-links">
+                <a href="#main">Главная</a>
+                <a href="#courses">Курсы</a>
+                <a href="#projects">Проекты</a>
+                <a href="#practice">Практика</a>
+                <a href="#portfolio">Сертификаты</a>
+                <a href="#selfdev">Саморазвитие</a>
+                <a href="#about">Обо мне</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Главная -->
+    <section id="main">
+        <div class="card hero">
+            <div>
+                <h1 class="hero-main-title">Гришаков Вадим Романович</h1>
+                <div class="hero-subtitle">
+                    Специализация: Программист — Python · Docker · SQL · Computer Vision
+                </div>
+                <div class="hero-tagline">
+                    «Разрабатываю программные модули, администрирую базы данных, создаю мобильные приложения
+                    и автоматизирую ИТ‑инфраструктуру на основе современных практик тестирования и контейнеризации».
+                </div>
+                <div class="hero-meta">
+                    <span>09.02.07 «Информационные системы и программирование»</span>
+                    <span>ГБПОУ МО «Люберецкий техникум имени Ю.А. Гагарина»</span>
+                    <span>Год окончания: 2027</span>
+                    <span>3 курс</span>
+                </div>
+            </div>
+            <aside class="hero-aside">
+                <div class="hero-aside-row">
+                    <span class="hero-aside-label">ФИО</span>
+                    <span class="hero-aside-value">Гришаков Вадим Романович</span>
+                </div>
+                <div class="hero-aside-row">
+                    <span class="hero-aside-label">Профиль</span>
+                    <span class="hero-aside-value">Python / DevOps / ML / DB</span>
+                </div>
+                <div class="hero-aside-row">
+                    <span class="hero-aside-label">Учебное заведение</span>
+                    <span class="hero-aside-value">ГБПОУ МО «Люберецкий техникум имени Ю.А. Гагарина»</span>
+                </div>
+                <div class="hero-aside-row">
+                    <span class="hero-aside-label">Специальность</span>
+                    <span class="hero-aside-value">09.02.07 «Информационные системы и программирование»</span>
+                </div>
+                <div class="hero-aside-row">
+                    <span class="hero-aside-label">Год окончания</span>
+                    <span class="hero-aside-value">2027</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Курсы -->
+    <section id="courses">
+        <div class="card">
+            <div class="section-title">
+                Курсы
+                <span>Python · DevOps · ML · DB</span>
+            </div>
+
+            <div class="pill-filters">
+                <div class="pill pill-primary">Python</div>
+                <div class="pill">DevOps</div>
+                <div class="pill">ML / Computer Vision</div>
+                <div class="pill">Базы данных</div>
+            </div>
+
+            <table>
+                <thead>
+                <tr>
+                    <th>Курс</th>
+                    <th>Платформа</th>
+                    <th>Ключевые навыки</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Python‑разработчик</td>
+                    <td>Яндекс Практикум</td>
+                    <td>
+                        <span class="table-badge">Автоматизация</span>
+                        <span class="table-badge">OpenCV</span>
+                        <span class="table-badge">Тестирование</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Docker & Контейнеризация</td>
+                    <td>VK Образование</td>
+                    <td>
+                        <span class="table-badge">Dockerfile</span>
+                        <span class="table-badge">docker-compose</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Computer Vision</td>
+                    <td>СберУниверситет</td>
+                    <td>
+                        <span class="table-badge">CNN</span>
+                        <span class="table-badge">Обработка изображений</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Базы данных SQL</td>
+                    <td>Код будущего</td>
+                    <td>
+                        <span class="table-badge">PostgreSQL</span>
+                        <span class="table-badge">Транзакции</span>
+                        <span class="table-badge">Индексы</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Проекты -->
+    <section id="projects">
+        <div class="card">
+            <div class="section-title">
+                Проекты
+                <span>МДК и практические работы</span>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-mdk">МДК 01.01 — Разработка программных модулей</div>
+                    <div class="project-title">Desktop CV App</div>
+                    <div class="project-desc">Настольное приложение на Python + PyQt + OpenCV.</div>
+                    <div class="project-role">Роль: разработчик, исследователь.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 01.02 — Поддержка и тестирование</div>
+                    <div class="project-title">Unit & Integration Tests Suite</div>
+                    <div class="project-desc">Набор тестов на pytest/unittest с отчётом о покрытии кода.</div>
+                    <div class="project-role">Роль: разработчик тестов.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 01.03 — Разработка мобильных приложений</div>
+                    <div class="project-title">Mobile CRM Client</div>
+                    <div class="project-desc">Мобильное Kivy‑приложение с сборкой APK.</div>
+                    <div class="project-role">Роль: разработчик интерфейса и логики.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 01.04 — Системное программирование</div>
+                    <div class="project-title">Dockerized Desktop App</div>
+                    <div class="project-desc">Docker‑образ настольного приложения для Linux‑окружения.</div>
+                    <div class="project-role">Роль: упаковка, настройка окружения.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 11.01 — Базы данных</div>
+                    <div class="project-title">Multi‑DB CRUD System</div>
+                    <div class="project-desc">CRUD‑система для SQLite, MySQL и PostgreSQL с миграциями.</div>
+                    <div class="project-role">Роль: проектирование схем, SQL‑запросы.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 02.03 — Математическое моделирование</div>
+                    <div class="project-title">ML Experiments</div>
+                    <div class="project-desc">Эксперименты с МНК, логистической регрессией и NLP‑подходами.</div>
+                    <div class="project-role">Роль: исследователь моделей.</div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-mdk">МДК 12.01 — Автоматизация</div>
+                    <div class="project-title">Vision‑Based Automation</div>
+                    <div class="project-desc">Система автоматизации на основе CNN, Flask/FastAPI и интеграции с камерами.</div>
+                    <div class="project-role">Роль: разработчик backend‑сервисов.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Практика -->
+    <section id="practice">
+        <div class="card">
+            <div class="section-title">
+                Практика
+                <span>Коммерческие и учебные</span>
+            </div>
+
+            <div class="practice-block">
+                <div>
+                    <h3 style="font-size:14px;margin:0 0 6px;">Коммерческие проекты</h3>
+                    <ul class="practice-list">
+                        <li>
+                            Разработка CI/CD для отдела ИТ —
+                            <span class="practice-money">120&nbsp;000&nbsp;₽</span>
+                        </li>
+                        <li>
+                            Автоматизация документооборота —
+                            <span class="practice-money">85&nbsp;000&nbsp;₽</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="font-size:14px;margin:0 0 6px;">Производственная практика</h3>
+                    <ul class="practice-list">
+                        <li>
+                            Настройка CI/CD (Docker, Linux, Python, SQL).
+                        </li>
+                        <li>
+                            Разработка интерактивной новеллы в Twine с фото и рефлексией.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сертификаты и портфолио -->
+    <section id="portfolio">
+        <div class="card">
+            <div class="section-title">
+                Сертификаты и портфолио
+                <span>Yandex Cloud · Stepik · 1С · олимпиады</span>
+            </div>
+
+            <div class="portfolio-grid">
+
+                <!-- ИИ Картинок и видео / Rezume2026 -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">ИИ картинок и видео · Rezume2026</div>
+                    <div class="portfolio-desc">
+                        Дополнительный сайт‑портфолио с примерами проектов в области ИИ картинок и видео.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/files/29435214/3.html"
+                           target="_blank" rel="noopener">
+                            Открыть страницу «ИИ Картинок и видео (3).html»
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ИТ-Планета -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Олимпиада «ИТ‑Планета»</div>
+                    <div class="portfolio-desc">
+                        Профиль участника в системе BRAIM Challenge с результатами соревнований.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://challenge.braim.org/profile"
+                           target="_blank" rel="noopener">
+                            challenge.braim.org/profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Траектория будущего -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Олимпиада «Траектория будущего»</div>
+                    <div class="portfolio-desc">
+                        Профиль участника, образовательные траектории и достижения.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://tbolimpiada.ru/profile"
+                           target="_blank" rel="noopener">
+                            tbolimpiada.ru/profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Сертификаты Yandex Cloud -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Сертификаты Yandex Cloud</div>
+                    <div class="portfolio-desc">
+                        Базовые и продвинутые компетенции в Yandex Cloud: DevOps, DevSecOps, нагрузочное тестирование.
+                    </div>
+                    <div class="portfolio-link">
+                        <ul class="practice-list" style="padding-left:16px;margin-top:4px;">
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246138/517697155_yc-cross-base_._.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: Cross-base (базовый курс)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246150/468531245_yc-devops-container_._.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: DevOps & контейнеризация
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246165/513568498_ycloud-devsecops_._.1.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: DevSecOps
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/user-attachments/files/29246239/520774157_ycloud-loadtesting_._.1.pdf"
+                                   target="_blank" rel="noopener">
+                                    Yandex Cloud: Load Testing
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Stepik сертификаты / скриншот -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Курсы Stepik</div>
+                    <div class="portfolio-desc">
+                        Онлайн‑курсы по программированию и ИТ с подтверждёнными сертификатами.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/assets/1bb9651d-f8d3-4dba-9dc9-b016fcbcab8b"
+                           target="_blank" rel="noopener">
+                            Скриншот сертификатов Stepik
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Конференция 1С -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Конференция 1С</div>
+                    <div class="portfolio-desc">
+                        Участие в конференции 1С, обмен опытом по разработке и автоматизации учётных систем.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://github.com/user-attachments/assets/05cb2c89-2028-476e-8b0c-420240167f67"
+                           target="_blank" rel="noopener">
+                            Фото с конференции 1С
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Учебная и производственная практика -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Учебная и производственная практика</div>
+                    <div class="portfolio-desc">
+                        Отчёты и материалы по учебной и производственной практике, проекты и документация.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/folders/18hbczJ1E7r3etnhUAayrHtY7sWRvZSj3?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto"
+                           target="_blank" rel="noopener">
+                            Папка практики в Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Шаблоны -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Шаблоны документов и проектов</div>
+                    <div class="portfolio-desc">
+                        Шаблоны отчётов, презентаций и проектной документации для ИТ‑проектов.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/folders/1rG3dJ-CJwdTQqq3NOBDH0JE9wopNSuPq"
+                           target="_blank" rel="noopener">
+                            Папка шаблонов в Google Drive
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Конспекты -->
+                <div class="portfolio-card">
+                    <div class="portfolio-title">Конспекты и учебные материалы</div>
+                    <div class="portfolio-desc">
+                        Личные конспекты по дисциплинам, систематизация теории и практики.
+                    </div>
+                    <div class="portfolio-link">
+                        <a href="https://drive.google.com/drive/u/0/folders/1_s0IMxoi8tExgOMIEs2sqD8oJFfuh_ac"
+                           target="_blank" rel="noopener">
+                            Папка конспектов в Google Drive
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Саморазвитие -->
+    <section id="selfdev">
+        <div class="card">
+            <div class="section-title">
+                Саморазвитие
+                <span>Roadmap и SDLC</span>
+            </div>
+
+            <h3 style="font-size:14px;margin:0 0 8px;">Roadmap направления</h3>
+            <div class="roadmap-grid">
+                <div class="card" style="padding:10px 10px 8px;">
+                    <div class="roadmap-card-title">Backend & Desktop</div>
+                    <div class="roadmap-tags">Python, FastAPI, PyQt, OpenCV.</div>
+                </div>
+                <div class="card" style="padding:10px 10px 8px;">
+                    <div class="roadmap-card-title">DevOps</div>
+                    <div class="roadmap-tags">Docker, Linux, Bash, Git.</div>
+                </div>
+                <div class="card" style="padding:10px 10px 8px;">
+                    <div class="roadmap-card-title">Базы данных</div>
+                    <div class="roadmap-tags">Проектирование, нормализация, оптимизация запросов.</div>
+                </div>
+                <div class="card" style="padding:10px 10px 8px;">
+                    <div class="roadmap-card-title">ML / Computer Vision</div>
+                    <div class="roadmap-tags">Обучение моделей, работа с изображениями.</div>
+                </div>
+            </div>
+
+            <h3 style="font-size:14px;margin:14px 0 8px;">SDLC (жизненный цикл ПО)</h3>
+            <div class="sdlc-grid">
+                <div>
+                    <div class="sdlc-step-title">Планирование</div>
+                    <div class="sdlc-tools">Notion, Miro, Google Forms.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Анализ требований</div>
+                    <div class="sdlc-tools">Markdown, draw.io.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Проектирование</div>
+                    <div class="sdlc-tools">Figma, Lucidchart, Mermaid.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Разработка</div>
+                    <div class="sdlc-tools">Python, PyQt, FastAPI, Git.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Тестирование</div>
+                    <div class="sdlc-tools">pytest, Postman.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Развёртывание</div>
+                    <div class="sdlc-tools">Docker, GitHub Pages, systemd.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title">Поддержка</div>
+                    <div class="sdlc-tools">journalctl, Bash‑скрипты.</div>
+                </div>
+                <div>
+                    <div class="sdlc-step-title sdlc-death">«Смерть» ПО</div>
+                    <div class="sdlc-tools sdlc-death">tar/gzip, миграция данных.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section id="about">
+        <div class="card">
+            <div class="section-title">
+                Обо мне
+                <span>Навыки и контакты</span>
+            </div>
+
+            <div class="about-grid">
+                <div>
+                    <div class="about-text">
+                        Студент 3 курса ГБПОУ МО «Люберецкий техникум имени Героя Советского Союза,
+                        лётчика‑космонавта Ю.А. Гагарина». Интересуюсь системным программированием,
+                        компьютерным зрением и информационной безопасностью. Работаю с Python, развиваю
+                        навыки в DevOps, базах данных и прикладном машинном обучении.
+                    </div>
+                </div>
+                <div>
+                    <table class="skills-table">
+                        <tbody>
+                        <tr>
+                            <td>Языки</td>
+                            <td class="skills-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Bash</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">1C</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Инструменты</td>
+                            <td class="skills-tags">
+                                <span class="tag">Docker</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">Linux</span>
+                                <span class="tag">OpenCV</span>
+                                <span class="tag">Angular</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Soft skills</td>
+                            <td class="skills-tags">
+                                <span class="tag tag-soft">Аналитическое мышление</span>
+                                <span class="tag tag-soft">Документирование</span>
+                                <span class="tag tag-soft">Работа в команде</span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div style="margin-top:14px;">
+                <div class="contacts">
+                    <div class="contact-pill">
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/VadimGrisakov" target="_blank" rel="noopener">
+                            github.com/va.grishakov
+                        </a>
+                    </div>
+                    <div class="contact-pill">
+                        <span class="contact-label">MAX</span>
+                        <a href="https://web.max.ru/-69215072458110" target="_blank" rel="noopener">
+                            @va_grishakov
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-meta">
+            <span>© 2025 Гришаков Вадим Романович</span>
+            <span>ГБПОУ МО «Люберецкий техникум имени Героя Советского Союза, лётчика‑космонавта Ю.А. Гагарина»</span>
+            <span>Год окончания: 2027</span>
+            <span>GitHub репозиторий сайта</span>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
